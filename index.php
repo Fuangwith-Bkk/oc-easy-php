@@ -1,4 +1,5 @@
 <?php
-  echo $ENV;
+  echo ${ENV};
+  echo "-------<hr>";
   phpinfo();
 ?>
