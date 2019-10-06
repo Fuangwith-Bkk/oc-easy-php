@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+    <?php
+        $namespace = getenv('OPENSHIFT_BUILD_NAMESPACE');
+        $buildname = getenv('OPENSHIFT_BUILD_NAME=web-7');
+        $github = getenv('OPENSHIFT_BUILD_SOURCE');
+        $src_folder = getenv('HOME');
+        $hostname = getenv('HOSTNAME');
+    ?>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img src="https://www.aswf.io/wp-content/uploads/sites/69/2019/05/Logo-RedHat-A-Color-RGB.png" height="50" alt="">
           
         </a>
-        web-12-d7nth
+        <?php echo "$hostname"; ?>
       </nav>
       <div class="bd-example">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -26,8 +33,8 @@
             <div class="carousel-item active">
               <img src="https://www.sagetopia.com/app/uploads/2017/11/REDHAT-Background-Photo.jpg" class="d-block w-100">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h5><?php echo "OpenShift Project Name is $namespace"; ?></h5>
+                <p><?php echo "Github: $github"; ?></p>
               </div>
             </div>
             <div class="carousel-item">
@@ -59,3 +66,4 @@
     
 </body>
 </html>
+
