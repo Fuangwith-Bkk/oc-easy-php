@@ -16,7 +16,7 @@
         $src_folder = getenv('HOME');
         $hostname = getenv('HOSTNAME');
     ?>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-warning">
         <a class="navbar-brand" href="#">
           <img src="https://www.aswf.io/wp-content/uploads/sites/69/2019/05/Logo-RedHat-A-Color-RGB.png" height="50" alt="">
           
